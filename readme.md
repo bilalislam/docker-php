@@ -10,3 +10,4 @@ https://www.php.net/manual/en/book.mysqli.php
 1.1. https://www.youtube.com/watch?v=r_9PnDWPl6s
 2. https://geekflare.com/php-fpm-optimization/#:~:text=The%20%E2%80%9CFPM%E2%80%9D%20part%20in%20PHP,by%20this%20FPM%20process%20manager.
 3.https://www.elastic.co/guide/en/logstash/current/config-examples.html
+3.1. logstash conf must be added to docker-compose
