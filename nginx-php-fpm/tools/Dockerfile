@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.2-fpm
 
 # php default extensions
 RUN apt-get update \

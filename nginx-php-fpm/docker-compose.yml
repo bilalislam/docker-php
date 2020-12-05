@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+     web:
+       image: nginx:alpine
+       ports:
+           - "8080:80"
+       volumes:
+           - ././src:/anakin/
+           - ./conf.d:/etc/nginx/conf.d
+       networks:
+           - nginxphp
+
+     php:
+       build: 
+         context: ./tools
+         dockerfile: Dockerfile  
+       volumes:
+           - ./src:/anakin
+       expose:
+           - 9000
+       networks:
+           - nginxphp
+
+networks:
+     nginxphp:
