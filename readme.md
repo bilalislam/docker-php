@@ -5,3 +5,5 @@ https://serverpilot.io/docs/how-to-install-the-php-sqlsrv-extension/
 
 https://www.php.net/manual/en/book.pdo.php
 https://www.php.net/manual/en/book.mysqli.php
+
+1. docker php image for prod.
