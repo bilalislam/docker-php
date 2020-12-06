@@ -8,6 +8,8 @@ services:
        volumes:
            - ././src:/anakin/
            - ./conf.d:/etc/nginx/conf.d
+       depends_on:
+           - php
        networks:
            - nginxphp
 
@@ -19,8 +21,17 @@ services:
            - ./src:/anakin
        expose:
            - 9000
+       depends_on:
+           - memcached
        networks:
            - nginxphp
+
+     memcached:
+       image: bitnami/memcached:latest
+       ports:
+           - "11211:11211"
+       networks:
+           - nginxphp           
 
 networks:
      nginxphp:
